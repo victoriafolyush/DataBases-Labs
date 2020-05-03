@@ -1,17 +1,17 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost/vending_machine_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    # Show or not log for each sql query
-    show-sql: true
-    hibernate:
-      # Hibernate ddl auto (validate, create, create-drop, update)
-      ddl-auto: validate
-      # Naming strategy
-      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-
-server:
-  port: 8080
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost/vending_machine_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+#    username: victoria
+#    password: victoria
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    # Show or not log for each sql query
+#    show-sql: true
+#    hibernate:
+#      # Hibernate ddl auto (validate, create, create-drop, update)
+#      ddl-auto: validate
+#      # Naming strategy
+#      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#
+#server:
+#  port: 8080
