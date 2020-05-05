@@ -1,4 +1,3 @@
 FROM openjdk:8
-ADD VendingMachineLab6.jar app.jar
-RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-Dspring.profiles.active=container", "-jar", "app.jar"]
+COPY VendingMachineLab6.jar VendingMachineLab6.jar
+ENTRYPOINT ["java", "-jar", "VendingMachineLab6.jar"]

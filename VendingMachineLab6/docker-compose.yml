@@ -2,6 +2,8 @@ version: "2.3"
 services:
   db:
     image: mysql:latest
+    restart: always
+    container_name: machine-mysql
     volumes:
     - type: bind
       source: ./database
@@ -17,13 +19,15 @@ services:
   web:
 #    build: ./src/Docker
     image: vending-machine_image
-    depends_on:
-      - db
-    ports:
-    - 8080:8080
+    container_name: machine-spring
     environment:
-      - DATABASE_HOST=db
+#      - DATABASE_HOST=db
       - DATABASE_USER=machine
       - DATABASE_PASSWORD=machine
       - DATABASE_NAME=vending_machine_db
       - DATABASE_PORT=3306
+      - WAIT_HOSTS=mysql:3306
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
